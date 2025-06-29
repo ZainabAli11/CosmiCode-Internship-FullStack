@@ -1,0 +1,242 @@
+/* RESET + BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.6s ease, color 0.4s ease;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* THEMES */
+body.default {
+  background: #ffffff;
+  color: #111827;
+}
+
+body.dark {
+  background: #111827;
+  color: #f1f5f9;
+}
+
+body.default .todo-app {
+  background: rgba(255, 255, 255, 0.85);
+  color: #111827;
+}
+
+body.dark .todo-app {
+  background: rgba(30, 41, 59, 0.85);
+  color: #f1f5f9;
+}
+
+/* APP CONTAINER */
+.todo-app {
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #0ea5e9;
+  margin-bottom: 20px;
+}
+
+/* INPUT SECTION */
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1 1 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #e2e8f0;
+  color: #111827;
+  min-width: 150px;
+}
+
+.input-section button {
+  flex: 1 1 25%;
+  padding: 10px 16px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-section button:hover {
+  background: #0284c7;
+}
+
+/* THEME TOGGLE + LIST TOGGLE BUTTONS */
+.dom-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dom-buttons button {
+  flex: 1 1 48%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #7dd3fc;
+  color: #1e3a8a;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.dom-buttons button:hover {
+  background: #0ea5e9;
+}
+
+/* TASK LIST */
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul#todo-list li {
+  background: #cbd5e1;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-left {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.task-left span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.task-left .status {
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
+  color: #475569;
+}
+
+.completed .task-left span {
+  text-decoration: line-through;
+  color: #475569;
+}
+
+.completed .status {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.active .status {
+  color:rgb(21, 32, 250);
+}
+
+.task-checkbox {
+  transform: scale(1.2);
+  accent-color: #0ea5e9;
+  cursor: pointer;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1 1 20%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.edit-btn {
+  background-color: #facc15;
+  color: #1e1b4b;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.filters button {
+  flex: 1 1 32%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #334155;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filters button:hover {
+  background: #475569;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+@media (max-width: 480px) {
+  .todo-app {
+    padding: 20px;
+  }
+
+  .input-section input,
+  .input-section button,
+  .dom-buttons button,
+  .filters button,
+  .edit-btn,
+  .delete-btn {
+    flex: 1 1 100%;
+  }
+
+  .task-left {
+    flex: 1 1 100%;
+  }
+}

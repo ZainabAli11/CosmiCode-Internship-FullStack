@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e1b4b, #312e81, #4f46e5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #e0e7ff;
+  position: relative;
+}
+
+.logo-top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.logo-top img {
+  width: 50px;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 60px;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #facc15;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 4px #facc1555;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #818cf8;
+  background-color: #1e1b4b;
+  color: #f3e8ff;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #a5b4fc;
+}
+
+input:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 6px #c084fc;
+  outline: none;
+  background-color: #2e1065;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #c7d2fe;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(168, 85, 247, 0.4);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(to right, #6d28d9, #f472b6);
+  transform: scale(1.02);
+}
+
+.message {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.message.error {
+  color: #f87171;
+}
+
+.message.success {
+  color: #4ade80;
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #cbd5e1;
+}
